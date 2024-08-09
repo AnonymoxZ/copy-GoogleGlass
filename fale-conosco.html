@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+<head>
+	<meta charset='UTF-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='Viewport' content='width=device-width, initial-scale=1.0'/>
+	<link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/form.css">
+	<link rel="icon" href="_imagens/glass-oculos-preto-peq.png" type="image/png">
+	<title>Google Glass</title>
+    <script>
+        function calc_total() {
+            var qnt = parseInt(document.getElementById('quantidade-ped-form').value);
+            tot = qnt * 1500;
+            document.getElementById('preco-ped-form').value = tot;
+        } 
+    </script>
+</head>
+
+<body>
+	<div id='interface'>
+		<header id="cabecalho">
+			<hgroup>
+				<h1><a href="index.html">Google Glass</a></h1>
+				<h2>A revolução do Google está chegando</h2>
+			</hgroup>
+			<img id="cab-icone" src='_imagens/contato.png' alt='logo-glass'>
+			<nav id="Menu">
+				<h1 style="visibility: hidden;" >Menu</h1>
+				<ul>
+					<li onmousemove="mudarIconeCab('_imagens/home.png')" onmouseout="mudarIconeCab('_imagens/contato.png')"><a id="inicio" href="index.html">Home</a></li>
+                    <li onmousemove="mudarIconeCab('_imagens/especificacoes.png')" onmouseout="mudarIconeCab('_imagens/contato.png')" ><a id="especificacao" href="specs.html">Especificações</a></li>
+                    <li onmousemove="mudarIconeCab('_imagens/fotos.png')" onmouseout="mudarIconeCab('_imagens/contato.png')" ><a id="galeria" href="fotos.html">Fotos</a></li>
+                    <li onmousemove="mudarIconeCab('_imagens/multimidia.png')" onmouseout="mudarIconeCab('_imagens/contato.png')"><a id="multimidia" href="multimidia.html">Multimídia</a></li>
+                    <li onmousemove="mudarIconeCab('_imagens/contato.png')" onmouseout="mudarIconeCab('_imagens/contato.png')" ><a id="contato" href="fale-conosco.html">Fale conosco</a></li>
+				</ul>
+			</nav>
+		</header>
+        <header id="cabecalho-sessao">
+            <hgroup class="cab-titulo">
+                <h3>Fale Conosco > Contato</h3>
+                <h1>Formulário de Contato</h1>
+            </hgroup>
+        </header>
+        <!-- Formulario de contato -->
+        <form name="form-contato" method="post" action="mailto:vitorcarlos16@outlook.com" oninput="calc_total();">
+            <fieldset id="identificacao"><legend>Identificação do Usuário</legend>
+                <p><label for='nome-form'>Nome:</label><input id="nome-form" type="text" name="dNome" placeholder="Nome completo" size="20" maxlength="30"></p>
+                <p><label for='senha-form'>Senha:</label><input id="senha-form" type="password" name="dSenha" placeholder="8 digitos" size="8" maxlength="8"></p>
+                <p><label for='email-form'>E-Mail:</label><input id="email-form" type="email" name="dEmail" placeholder="E-Mail" size="30" maxlength="30"></p>
+                <fieldset id="sexo"><legend>Sexo:</legend>
+                    <input id="opt-masc" type="radio" name="dSexo"><label for="opt-masc">Masculino</label><br>
+                    <input id="opt-fem" type="radio" name="dSexo"><label for="opt-fem">Feminino</label>
+                </fieldset>
+                    <p>Data de Nascimento:<input id="data-nascimento-form" type="date" name="dNascimento"></p>
+            </fieldset>
+
+            <fieldset id="endereco"><legend>Endereço do Usuário</legend>
+               <p><label for="logradouro-form">Logradouro:</label><input id="logradouro-form" type="text" name="dLogradouro" placeholder="Rua, Av, trav" size="10" maxlength="20"></p>
+                <p><label for='num-casa-form'>Número:</label><input id="num-casa-form" type="number" name="dNumero" size="7" min="0" max="99999" placeholder="Nº casa"></p>
+                   <p><label name="dEstado" id="estado-form">Estado</label>
+                    <select name="dEstado" id="estado-form">
+                        <optgroup label="Região Norte">
+                            <option>Amazonas</option>
+                            <option>Pará</option>
+                            <option>Roraima</option>
+                        </optgroup>
+                        <optgroup label="Região Sudeste">
+                            <option>Rio de Janeiro</option>
+                            <option>São Paulo</option>
+                            <option>Minas Gerais</option>
+                        </optgroup>
+                        <optgroup label="Região Sul">
+                            <option>Paraná</option>
+                            <option>Santa Catarina</option>
+                            <option>Rio Grande do Sul</option>
+                        </optgroup>
+                    </select></p>
+                <p><label for="cidades-form">Cidade</label>
+                    <input id="cidades-form" name="dCidade" type="text" placeholder="Sua cidade" list="cidades">
+                    <datalist id="cidades">
+                        <option>Curitiba</option>
+                        <option>São Paulo</option>
+                        <option>Rio de Janeiro</option>
+                        <option>Belo Horizonte</option>
+                        <option>Porto Alegre</option>
+                        <option>Salvador</option>
+                        <option>Espirito Santo</option>
+                        <option>Manaus</option>
+                        <option>Florianópolis</option>
+                    </datalist>
+                </p>
+            </fieldset>
+            <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+                <p><label for="grau-urgencia">Grau de Urgência:</label>
+                <input id="grau-urgencia" type="range" name="dUrgencia" size="20" min="0" max="10" step="2"></p>
+                <p><label for="mensagem-form">Mensagem:</label></p>
+                <textarea id="mensagem-form" type="text" name="dMsg" rows="5" cols="35" class="ls-textarea-autoresize" maxlength="400" placeholder="Sua mensagem"></textarea>
+            </fieldset>
+
+            <fieldset id="pedido"><legend>Quero um Google Glass</legend>
+                <p><input id="add-pedido-form" type="checkbox" name="dPed" checked/>
+                <label for="add-pedido-form">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                <p><label for="cor-pedido-form">Cor:</label>
+                <input id="cor-pedido-form"  type="color" name="dCor"></p>
+                <p><label for="quantidade-ped-form">Quantidade:</label>
+                <input id="quantidade-ped-form" type="number" name="dQuantidade" maxlength="5" min="0" max="5" value="0"></p>
+                <p><label for="dPreco">Preço Total: R$</label>
+                <input id="preco-ped-form" type="text" name="dPreco" placeholder="Total a pagar" readonly></p>
+            </fieldset>
+            <button><img id="botao-form" src="_imagens/botao-enviar.png"></button>
+        </form>
+
+<footer id="rodape">
+    <p class="referencias-finais">Copyright 2024 - by Vitor Carlos<br>
+    <a class="referencias-finais" href="https://github.com/AnonymoxZ" target="_blank">GitHub</a> - <a href="https://www.linkedin.com/in/vitor-carlos-ab480b2a8/" target="_blank">Linkedin</a> </p>
+</footer>
+</div>
+<script src='_javascript/funcoes.js'></script>
+</body>
+
+</html>

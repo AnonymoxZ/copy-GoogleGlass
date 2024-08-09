@@ -1,0 +1,8 @@
+RGB = Red - Green - Blue => Limitado até 255
+HEX = 00  -   00  -  00
+HSB = Hue, Saturation e Brightness => HSL => S e L devem ser definidos por valores percentuais
+
+
+<figure> - Essa tag desempenhará o mesmo papel que uma section por exemplo, porém ela é própria para englobar conteúdos relacionados a uma imagem ou legenda de uma imagem, ou seja, esse é a sua maior função.
+
+<figurecaption> O elemento figcaption destina-se a marcar o cabeçalho ou a legenda para uma figura

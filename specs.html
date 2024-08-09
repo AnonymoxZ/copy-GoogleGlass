@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+<head>
+	<meta charset='UTF-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='Viewport' content='width=device-width, initial-scale=1.0'/>
+	<link rel="stylesheet" href="_css/estilo.css">
+	<link rel="stylesheet" href="_css/specs.css">
+	<link rel="icon" href="_imagens/glass-oculos-preto-gig.png" type="image/png">
+	<title>Google Glass</title>
+</head>
+<script src='_javascript/funcoes.js'></script>
+<body>
+	<div id='interface'>
+		<header id="cabecalho">
+			<hgroup>
+				<h1><a href="index.html">Google Glass</a></h1>
+				<h2>A revolução do Google está chegando</h2>
+			</hgroup>
+			<img id="cab-icone" src='_imagens/especificacoes.png' alt='logo-glass'>
+			<nav id="Menu">
+				<h1 style="visibility: hidden;" >Menu</h1>
+				<ul>
+					<li onmousemove="mudarIconeCab('_imagens/home.png')" onmouseout="mudarIconeCab('_imagens/especificacoes.png')"><a id="inicio" href="index.html">Home</a></li>
+                    <li onmousemove="mudarIconeCab('_imagens/especificacoes.png')" onmouseout="mudarIconeCab('_imagens/especificacoes.png')" ><a id="especificacao" href="specs.html">Especificações</a></li>
+                    <li onmousemove="mudarIconeCab('_imagens/fotos.png')" onmouseout="mudarIconeCab('_imagens/especificacoes.png')" ><a id="galeria" href="fotos.html">Fotos</a></li>
+                    <li onmousemove="mudarIconeCab('_imagens/multimidia.png')" onmouseout="mudarIconeCab('_imagens/especificacoes.png')"><a id="multimidia" href="multimidia.html">Multimídia</a></li>
+                    <li onmousemove="mudarIconeCab('_imagens/contato.png')" onmouseout="mudarIconeCab('_imagens/especificacoes.png')" ><a id="contato" href="fale-conosco.html">Fale conosco</a></li>
+				</ul>
+			</nav>
+		</header>
+<section id="sessao-cabecalho">
+	<section id="sessao-titulos">
+		<header id="cabecalho-sessao">
+			<hgroup class="cab-titulo">
+				<h3>Glass > Especificações</h3>
+				<h1>Raio-X no Google Glass</h1>
+			</hgroup>
+		</header>
+<p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+
+<section id="conteudo">
+	<img src="_imagens/glass-esquema-marcado.jpg" alt="imagem mapeada do Glass" usemap="#mapa-img-oculos">
+	<map name="mapa-img-oculos">
+		<area shape="rect" coords="265,242, 184,218" href="google-glass.html#tela" target="janela">
+		<area shape="rect" coords="165,251, 147,233" href="google-glass.html#camera" target="janela">
+		<area shape="rect" coords="66,39, 86,58" href="google-glass.html#sensores" target="janela">
+		<area shape="poly" coords="28, 146, 82, 215, 80, 248, 27, 167," href="google-glass.html#gadgets" target="janela">
+	</map>
+	<iframe id="win-frame" src="google-glass.html" name="janela"></iframe>
+</section>
+	</article>
+</section>
+<footer id="rodape">
+    <p class="referencias-finais">Copyright 2024 - by Vitor Carlos<br>
+    <a class="referencias-finais" href="https://github.com/AnonymoxZ" target="_blank">GitHub</a> - <a href="https://www.linkedin.com/in/vitor-carlos-ab480b2a8/" target="_blank">Linkedin</a> </p>
+</footer>
+</div>
+</body>
+
+</html>	

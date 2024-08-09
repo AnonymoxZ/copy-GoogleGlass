@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+<head>
+	<meta charset='UTF-8'>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='Viewport' content='width=device-width, initial-scale=1.0'/>
+	<link rel="stylesheet" href="_css/estilo.css">
+	<link rel="stylesheet" href="_css/media.css">
+	<link rel="icon" href="_imagens/glass-oculos-preto-gig.png" type="image/png">
+	<title>Google Glass</title>
+</head>
+<script src='_javascript/funcoes.js'></script>
+<body>
+	<div id='interface'>
+		<header id="cabecalho">
+			<hgroup>
+				<h1><a href="index.html">Google Glass</a></h1>
+				<h2>A revolução do Google está chegando</h2>
+			</hgroup>
+			<img id="cab-icone" src='_imagens/multimidia.png' alt='logo-glass'>
+			<nav id="Menu">
+				<h1 style="visibility: hidden;" >Menu</h1>
+				<ul>
+					<li onmousemove="mudarIconeCab('_imagens/home.png')" onmouseout="mudarIconeCab('_imagens/multimidia.png')"><a id="inicio" href="index.html">Home</a></li>
+                    <li onmousemove="mudarIconeCab('_imagens/especificacoes.png')" onmouseout="mudarIconeCab('_imagens/multimidia.png')" ><a id="especificacao" href="specs.html">Especificações</a></li>
+                    <li onmousemove="mudarIconeCab('_imagens/fotos.png')" onmouseout="mudarIconeCab('_imagens/multimidia.png')" ><a id="galeria" href="fotos.html">Fotos</a></li>
+                    <li onmousemove="mudarIconeCab('_imagens/multimidia.png')" onmouseout="mudarIconeCab('_imagens/multimidia.png')"><a id="multimidia" href="multimidia.html">Multimídia</a></li>
+                    <li onmousemove="mudarIconeCab('_imagens/contato.png')" onmouseout="mudarIconeCab('_imagens/multimidia.png')" ><a id="contato" href="fale-conosco.html">Fale conosco</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section id="multimidia">
+		<hgroup class="cab-titulo">
+			<h3>Glass > Multimídia</h3>
+			<h1>Sons e Vídeos</h1>
+		</hgroup>
+		</section>
+		<div id="tv-radio">
+			<audio id="musica" controls="controls">
+				<source src="_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg">
+			</audio>
+			<video id="filme" controls="controls" poster="_imagens/video-mini03.jpg">
+				<source src="_media/getting-started.mp4" type="video/mp4">
+			</video>
+		</div>
+<footer id="rodape">
+    <p class="referencias-finais">Copyright 2024 - by Vitor Carlos<br>
+    <a class="referencias-finais" href="https://github.com/AnonymoxZ" target="_blank">GitHub</a> - <a href="https://www.linkedin.com/in/vitor-carlos-ab480b2a8/" target="_blank">Linkedin</a> </p>
+</footer>
+</div>
+</body>
+
+</html>

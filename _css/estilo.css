@@ -1,0 +1,217 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');    
+@font-face {
+    font-family: 'FonteTitle';
+    src: url('../_fonts/bubblegum-sans-regular.otf');
+}
+
+body {
+    font-family: Arial;
+    background-color: #dddddd;
+    color: rgba(0,0,0,1);
+    margin: 0;
+    padding: 0;
+}
+p {
+    text-align: justify; /* Faz alinhamento no texto justificando os paragrafos */
+    text-indent: 50px;	/* Cria uma tabulaçao antes de cada linha de inicio de paragrafo  */
+    font-family: Arial;
+}
+/* Titulos e subtitulos */
+h2.sub-titulo  {
+    color: #505050;
+    background-color: #84838380 ;
+    font-size: 17pt;
+}
+div#interface {
+    width: 900px;
+    background-color: #fff;
+    margin: -20px auto 0px auto;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 10px black;
+    border: 2px solid rgba(0,0,0,.5);
+}
+
+/* Cabeçalho da interface */
+header#cabecalho img#cab-icone {
+    position: absolute;
+    left: 1055px;
+    top: 55px;
+}
+header#cabecalho {
+    border-bottom: 1px solid #000000;
+    height: 150px;
+    background: url('../_imagens/glass-logo-peq.jpg') no-repeat 0px 100px;
+}
+header#cabecalho h1 {
+    font-family: 'FonteTitle', sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+header#cabecalho a {
+    text-decoration: none;
+    color: #606060;
+
+}
+header#cabecalho h2 {
+    font-family: "Vollkorn", serif;
+    color: #888888;
+    font-size: 15pt;
+    padding: 0px;
+    margin-top: 0px;
+}
+hgroup.cab-titulo h1 {
+    color: #606060; 
+    font-size: 20pt;
+    font-family: FonteTitle;
+}
+hgroup.cab-titulo h3 { 
+    color: #888888;
+    font-family: 'Vollkorn';
+}
+/* Sessao principal */
+section#sessao-principal {
+    display: block;
+    width: 470px;
+    float: left;
+    border-right: 1px solid #000000;
+    padding: 10px;
+}
+/* Sessao lateral */
+aside#sessao-lateral {
+    display: block;
+    width: 350px;
+    float: right;
+    margin: 26px 10px 0px 10px;
+    padding: 15px;
+    background-color: #84838380;
+    box-shadow: 2px 2px 3px rgba(0,0,0,.5);
+}
+aside#sessao-lateral h1 {
+    font-family: "Vollkorn", serif;
+    color: #888888;
+    padding: 5px;
+    margin-top: 0px;
+    font-size: 20pt;
+    color: #505050;
+}
+aside#sessao-lateral h2 {
+    background-color: #606060;
+    font-size: 13pt;
+    color: white;
+    font-weight: bolder;
+    padding: 10px;
+}
+/* reset css de formatação de tag figure */
+figure {
+    margin: 0;
+    padding: 0;
+}
+figure.foto-legenda {
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;
+    height: 310px;
+    width: 430px;
+}
+figure.foto-legenda img {
+    width: 100%;
+    height: 100%;
+}
+figure.foto-legenda figcaption {
+    opacity: 0%;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0,0,0,.4);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 1s;
+}
+figure.foto-legenda:hover figcaption { /* dispara a formatação da classe foto-legenda especificicada para o conteiner figcaption */
+    opacity: 1;
+}
+/* Formatação Menu  */
+nav#Menu {
+    display: block; /* Faz com que o menu fique flutuando, livre para manipulção de sua posiçao*/
+}
+
+nav#Menu ul {
+    color: white;
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: -20px;
+    left: 550px;
+
+}
+nav#Menu li {
+    display: inline-block; /* Deixa uma lista alinhada em linha */
+    background-color: rgb(179, 173, 173);
+    padding: 10px;
+    margin: 2px;
+    transition: 1s;
+}
+nav#Menu li:hover {
+    background-color: #726e6e;
+
+}
+nav#Menu a {
+    text-decoration: none;
+    color: black;
+}
+nav#Menu a:hover
+{
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+/* Tabela de especificações */
+table#tabela {
+    border: 1px solid #000;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+table#tabela caption#titulo-tab {
+    color: #888888;
+    font-size: 18px;
+    font-weight: bolder;
+}
+table#tabela caption span {
+    display: block;
+    float: right;
+    color: #888888;
+    font-weight: bolder;
+    font-size: 8pt;
+    margin-top: 8px;
+}
+table#tabela td {
+    border: 1px solid #606060;
+    padding: 10px;  
+}
+table#tabela td.ce {
+    color: white;
+    background-color: #606060;
+    vertical-align: top;
+    text-align: right;
+    font-weight: bold;
+}
+table#tabela td.cd {
+    background-color: #cececece;
+}
+
+/* Rodape */
+footer#rodape {
+    clear: both; /* Faz com que elementos flutuantes fiquem acima dele */
+    border-top: 1px solid #000000;
+}
+footer#rodape p {
+    text-align: center;
+    text-indent: -9px;
+}
